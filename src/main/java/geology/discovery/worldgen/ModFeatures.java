@@ -50,6 +50,24 @@ public class ModFeatures {
                     Geological.id("strange_gravel"),
                     new StrangeGravelFeature(DefaultFeatureConfig.CODEC)
             );
+    public static final Feature<DefaultFeatureConfig> STRANGE_SANDSTONE =
+            Registry.register(
+                    Registries.FEATURE,
+                    Geological.id("strange_sandstone"),
+                    new StrangeSandstoneFeature(DefaultFeatureConfig.CODEC)
+            );
+    public static final Feature<DefaultFeatureConfig> STRANGE_RED_SANDSTONE =
+            Registry.register(
+                    Registries.FEATURE,
+                    Geological.id("strange_red_sandstone"),
+                    new StrangeRedSandstoneFeature(DefaultFeatureConfig.CODEC)
+            );
+    public static final Feature<DefaultFeatureConfig> STRANGE_BASALT =
+            Registry.register(
+                    Registries.FEATURE,
+                    Geological.id("strange_basalt"),
+                    new StrangeBasaltFeature(DefaultFeatureConfig.CODEC)
+            );
 
     public static void register() {
         Geological.LOGGER.info("Registering features");
@@ -60,5 +78,8 @@ public class ModFeatures {
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_TUFF));
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_DEEPSLATE));
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_GRAVEL));
+        Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_SANDSTONE));
+        Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_RED_SANDSTONE));
+        Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_BASALT));
         }
     }
