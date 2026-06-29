@@ -1,0 +1,13 @@
+{
+  "block.geological.strange_stone": "Strange Stone",
+  "block.geological.strange_granite": "Strange Granite",
+  "block.geological.strange_diorite": "Strange Diorite",
+  "block.geological.strange_andesite": "Strange Andesite",
+  "block.geological.strange_deepslate": "Strange Deepslate",
+  "block.geological.strange_tuff": "Strange Tuff",
+  "block.geological.strange_basalt": "Strange Basalt",
+  "block.geological.strange_sandstone": "Strange Sandstone",
+  "block.geological.strange_red_sandstone": "Strange Red Sandstone",
+  "block.geological.strange_gravel": "Strange Gravel",
+  "itemGroup.geological": "Geological"
+}

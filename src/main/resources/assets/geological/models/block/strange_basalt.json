@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "geological:block/strange_basalt_top",
+    "side": "geological:block/strange_basalt_side"
+  }
+}
