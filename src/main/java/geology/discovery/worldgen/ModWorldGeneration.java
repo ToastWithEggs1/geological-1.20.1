@@ -24,6 +24,12 @@ public class ModWorldGeneration {
     public static final RegistryKey<PlacedFeature> STRANGE_TUFF_PLACED_KEY =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, Geological.id("strange_tuff"));
 
+    public static final RegistryKey<PlacedFeature> STRANGE_DEEPSLATE_PLACED_KEY =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, Geological.id("strange_deepslate"));
+
+    public static final RegistryKey<PlacedFeature> STRANGE_GRAVEL_PLACED_KEY =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, Geological.id("strange_gravel"));
+
     public static void generateModWorldGen() {
         Geological.LOGGER.info("Registering Geological world generation");
 
@@ -55,6 +61,18 @@ public class ModWorldGeneration {
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
                 STRANGE_TUFF_PLACED_KEY
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                STRANGE_DEEPSLATE_PLACED_KEY
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                STRANGE_GRAVEL_PLACED_KEY
         );
     }
 }

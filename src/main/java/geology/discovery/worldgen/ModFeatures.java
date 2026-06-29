@@ -38,6 +38,18 @@ public class ModFeatures {
                     Geological.id("strange_tuff"),
                     new StrangeTuffFeature(DefaultFeatureConfig.CODEC)
             );
+    public static final Feature<DefaultFeatureConfig> STRANGE_DEEPSLATE =
+            Registry.register(
+                    Registries.FEATURE,
+                    Geological.id("strange_deepslate"),
+                    new StrangeDeepslateFeature(DefaultFeatureConfig.CODEC)
+            );
+    public static final Feature<DefaultFeatureConfig> STRANGE_GRAVEL =
+            Registry.register(
+                    Registries.FEATURE,
+                    Geological.id("strange_gravel"),
+                    new StrangeGravelFeature(DefaultFeatureConfig.CODEC)
+            );
 
     public static void register() {
         Geological.LOGGER.info("Registering features");
@@ -46,5 +58,7 @@ public class ModFeatures {
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_ANDESITE));
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_STONE));
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_TUFF));
+        Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_DEEPSLATE));
+        Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_GRAVEL));
         }
     }
