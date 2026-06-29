@@ -9,5 +9,8 @@
   "block.geological.strange_sandstone": "Strange Sandstone",
   "block.geological.strange_red_sandstone": "Strange Red Sandstone",
   "block.geological.strange_gravel": "Strange Gravel",
-  "itemGroup.geological": "Geological"
+  "item.geological.geological_hammer": "Geological Hammer",
+
+  "itemGroup.geological.blocks": "Geological : Blocks",
+  "itemGroup.geological.items": "Geological : Items"
 }

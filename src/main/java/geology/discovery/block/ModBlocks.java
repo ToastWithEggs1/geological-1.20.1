@@ -10,6 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.block.FallingBlock;
 
 public class ModBlocks {
     public static final Block STRANGE_GRANITE = registerBlock(
@@ -43,7 +44,7 @@ public class ModBlocks {
 
     public static final Block STRANGE_GRAVEL = registerBlock(
             "strange_gravel",
-            new Block(AbstractBlock.Settings.copy(Blocks.GRAVEL))
+            new FallingBlock(AbstractBlock.Settings.copy(Blocks.GRAVEL))
     );
 
     public static final Block STRANGE_BASALT = registerBlock(

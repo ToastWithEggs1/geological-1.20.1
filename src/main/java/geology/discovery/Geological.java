@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import geology.discovery.item.ModItemGroups;
 import geology.discovery.worldgen.ModFeatures;
 import geology.discovery.worldgen.ModWorldGeneration;
+import geology.discovery.item.ModItems;
 
 public class Geological implements ModInitializer {
 	public static final String MOD_ID = "geological";
@@ -21,8 +22,9 @@ public class Geological implements ModInitializer {
 	public void onInitialize() {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
-		ModWorldGeneration.generateModWorldGen();
 		ModFeatures.register();
+		ModItems.registerModItems();
+		ModWorldGeneration.generateModWorldGen();
 		LOGGER.info("Hello Fabric world!");
 	}
 
