@@ -26,11 +26,25 @@ public class ModFeatures {
                     Geological.id("strange_andesite"),
                     new StrangeAndesiteFeature(DefaultFeatureConfig.CODEC)
             );
+    public static final Feature<DefaultFeatureConfig> STRANGE_STONE =
+            Registry.register(
+                    Registries.FEATURE,
+                    Geological.id("strange_stone"),
+                    new StrangeStoneFeature(DefaultFeatureConfig.CODEC)
+            );
+    public static final Feature<DefaultFeatureConfig> STRANGE_TUFF =
+            Registry.register(
+                    Registries.FEATURE,
+                    Geological.id("strange_tuff"),
+                    new StrangeTuffFeature(DefaultFeatureConfig.CODEC)
+            );
 
     public static void register() {
         Geological.LOGGER.info("Registering features");
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_GRANITE));
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_DIORITE));
         Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_ANDESITE));
+        Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_STONE));
+        Geological.LOGGER.info("Feature ID: {}", Registries.FEATURE.getId(STRANGE_TUFF));
         }
     }
