@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "geological:strange_stone",
+    "geological:strange_granite",
+    "geological:strange_diorite",
+    "geological:strange_andesite",
+    "geological:strange_deepslate",
+    "geological:strange_tuff",
+    "geological:strange_basalt",
+    "geological:strange_sandstone",
+    "geological:strange_red_sandstone"
+  ]
+}

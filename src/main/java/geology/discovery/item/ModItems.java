@@ -9,7 +9,7 @@ import net.minecraft.registry.Registry;
 public class ModItems {
     public static final Item GEOLOGICAL_HAMMER = registerItem(
             "geological_hammer",
-            new GeologicalHammerItem(new FabricItemSettings().maxDamage(250))
+            new GeologicalHammerItem(new FabricItemSettings())
     );
 
     private static Item registerItem(String name, Item item) {
