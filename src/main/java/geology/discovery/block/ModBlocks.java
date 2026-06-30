@@ -11,6 +11,8 @@ import net.minecraft.registry.Registry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.block.FallingBlock;
+import net.minecraft.block.CarpetBlock;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
     public static final Block STRANGE_GRANITE = registerBlock(
@@ -60,6 +62,13 @@ public class ModBlocks {
     public static final Block STRANGE_RED_SANDSTONE = registerBlock(
             "strange_red_sandstone",
             new Block(AbstractBlock.Settings.copy(Blocks.RED_SANDSTONE))
+    );
+
+    public static final Block MINERAL_PEBBLES = registerBlock(
+            "mineral_pebbles",
+            new MineralPebblesBlock(AbstractBlock.Settings.copy(Blocks.GRAY_CARPET)
+                    .sounds(BlockSoundGroup.GRAVEL)
+                    .nonOpaque())
     );
 
     private static Block registerBlock(String name, Block block) {

@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"geology.discovery.Geological"
+		],
+		"client": [
+			"geology.discovery.GeologicalClient"
 		]
 	},
 	"mixins": [

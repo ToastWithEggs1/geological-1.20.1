@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRANGE_SANDSTONE);
                         entries.add(ModBlocks.STRANGE_RED_SANDSTONE);
                         entries.add(ModBlocks.STRANGE_GRAVEL);
+                        entries.add(ModBlocks.MINERAL_PEBBLES);
                     })
                     .build()
     );
