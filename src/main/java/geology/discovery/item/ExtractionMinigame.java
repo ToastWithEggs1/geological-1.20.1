@@ -48,8 +48,7 @@ public class ExtractionMinigame {
                 || block == ModBlocks.STRANGE_DEEPSLATE
                 || block == ModBlocks.STRANGE_TUFF
                 || block == ModBlocks.STRANGE_BASALT
-                || block == ModBlocks.STRANGE_SANDSTONE
-                || block == ModBlocks.STRANGE_RED_SANDSTONE;
+                || block == ModBlocks.STRANGE_SANDSTONE;
     }
 
     public static void handleHammerClick(ServerPlayerEntity player, World world, BlockPos pos) {
@@ -169,7 +168,7 @@ public class ExtractionMinigame {
             return;
         }
 
-        MineralDrop mineralDrop = chooseMineralDrop(world, session.pos, currentBlock);
+        MineralDrop mineralDrop = chooseMineralDrop(player, currentBlock);
 
         boolean fragmented = shouldFragment(player, session.hits);
 
@@ -221,10 +220,111 @@ public class ExtractionMinigame {
         }
     }
 
-    private static MineralDrop chooseMineralDrop(World world, BlockPos pos, Block strangeBlock) {
-        // Temporary placeholder:
-        // Later this can become rock-based, biome-based, or both.
+    private static MineralDrop chooseMineralDrop(ServerPlayerEntity player, Block strangeBlock) {
+        if (strangeBlock == ModBlocks.STRANGE_STONE) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.CALCITE, ModItems.CALCITE_FRAGMENTS, 35),
+                    new WeightedMineralDrop(ModItems.PYRITE, ModItems.PYRITE_FRAGMENTS, 25),
+                    new WeightedMineralDrop(ModItems.HEMATITE, ModItems.HEMATITE_FRAGMENTS, 18),
+                    new WeightedMineralDrop(ModItems.MALACHITE, ModItems.MALACHITE_FRAGMENTS, 10),
+                    new WeightedMineralDrop(ModItems.AZURITE, ModItems.AZURITE_FRAGMENTS, 6)
+            );
+        }
+
+        if (strangeBlock == ModBlocks.STRANGE_GRANITE) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.GARNET, ModItems.GARNET_FRAGMENTS, 35),
+                    new WeightedMineralDrop(ModItems.PYRITE, ModItems.PYRITE_FRAGMENTS, 25),
+                    new WeightedMineralDrop(ModItems.LABRADORITE, ModItems.LABRADORITE_FRAGMENTS, 15),
+                    new WeightedMineralDrop(ModItems.SCHEELITE, ModItems.SCHEELITE_FRAGMENTS, 8)
+            );
+        }
+
+        if (strangeBlock == ModBlocks.STRANGE_DIORITE) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.MAGNETITE, ModItems.MAGNETITE_FRAGMENTS, 30),
+                    new WeightedMineralDrop(ModItems.HEMATITE, ModItems.HEMATITE_FRAGMENTS, 25),
+                    new WeightedMineralDrop(ModItems.LABRADORITE, ModItems.LABRADORITE_FRAGMENTS, 18),
+                    new WeightedMineralDrop(ModItems.PYRITE, ModItems.PYRITE_FRAGMENTS, 12)
+            );
+        }
+
+        if (strangeBlock == ModBlocks.STRANGE_ANDESITE) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.MAGNETITE, ModItems.MAGNETITE_FRAGMENTS, 30),
+                    new WeightedMineralDrop(ModItems.HEMATITE, ModItems.HEMATITE_FRAGMENTS, 25),
+                    new WeightedMineralDrop(ModItems.PYRITE, ModItems.PYRITE_FRAGMENTS, 18),
+                    new WeightedMineralDrop(ModItems.LABRADORITE, ModItems.LABRADORITE_FRAGMENTS, 10)
+            );
+        }
+
+        if (strangeBlock == ModBlocks.STRANGE_DEEPSLATE) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.PYRITE, ModItems.PYRITE_FRAGMENTS, 28),
+                    new WeightedMineralDrop(ModItems.HEMATITE, ModItems.HEMATITE_FRAGMENTS, 24),
+                    new WeightedMineralDrop(ModItems.MAGNETITE, ModItems.MAGNETITE_FRAGMENTS, 20),
+                    new WeightedMineralDrop(ModItems.GARNET, ModItems.GARNET_FRAGMENTS, 12),
+                    new WeightedMineralDrop(ModItems.SCHEELITE, ModItems.SCHEELITE_FRAGMENTS, 6)
+            );
+        }
+
+        if (strangeBlock == ModBlocks.STRANGE_TUFF) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.CALCITE, ModItems.CALCITE_FRAGMENTS, 30),
+                    new WeightedMineralDrop(ModItems.PYRITE, ModItems.PYRITE_FRAGMENTS, 24),
+                    new WeightedMineralDrop(ModItems.HEMATITE, ModItems.HEMATITE_FRAGMENTS, 18),
+                    new WeightedMineralDrop(ModItems.MAGNETITE, ModItems.MAGNETITE_FRAGMENTS, 14)
+            );
+        }
+
+        if (strangeBlock == ModBlocks.STRANGE_BASALT) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.MAGNETITE, ModItems.MAGNETITE_FRAGMENTS, 40),
+                    new WeightedMineralDrop(ModItems.HEMATITE, ModItems.HEMATITE_FRAGMENTS, 25),
+                    new WeightedMineralDrop(ModItems.LABRADORITE, ModItems.LABRADORITE_FRAGMENTS, 10)
+            );
+        }
+
+        if (strangeBlock == ModBlocks.STRANGE_SANDSTONE) {
+            return pickWeighted(
+                    player,
+                    new WeightedMineralDrop(ModItems.CALCITE, ModItems.CALCITE_FRAGMENTS, 35),
+                    new WeightedMineralDrop(ModItems.TIGERS_EYE, ModItems.TIGERS_EYE_FRAGMENTS, 25),
+                    new WeightedMineralDrop(ModItems.HEMATITE, ModItems.HEMATITE_FRAGMENTS, 15),
+                    new WeightedMineralDrop(ModItems.MALACHITE, ModItems.MALACHITE_FRAGMENTS, 8),
+                    new WeightedMineralDrop(ModItems.AZURITE, ModItems.AZURITE_FRAGMENTS, 5)
+            );
+        }
+
         return new MineralDrop(ModItems.PYRITE, ModItems.PYRITE_FRAGMENTS);
+    }
+
+    private static MineralDrop pickWeighted(ServerPlayerEntity player, WeightedMineralDrop... drops) {
+        int totalWeight = 0;
+
+        for (WeightedMineralDrop drop : drops) {
+            totalWeight += drop.weight;
+        }
+
+        int roll = player.getRandom().nextInt(totalWeight);
+
+        for (WeightedMineralDrop drop : drops) {
+            roll -= drop.weight;
+
+            if (roll < 0) {
+                return new MineralDrop(drop.specimenItem, drop.fragmentsItem);
+            }
+        }
+
+        WeightedMineralDrop fallback = drops[0];
+        return new MineralDrop(fallback.specimenItem, fallback.fragmentsItem);
     }
 
     private static void dropSpecimen(World world, BlockPos pos, MineralDrop mineralDrop, ExtractionQuality quality) {
@@ -392,6 +492,18 @@ public class ExtractionMinigame {
         private MineralDrop(Item specimenItem, Item fragmentsItem) {
             this.specimenItem = specimenItem;
             this.fragmentsItem = fragmentsItem;
+        }
+    }
+
+    private static class WeightedMineralDrop {
+        private final Item specimenItem;
+        private final Item fragmentsItem;
+        private final int weight;
+
+        private WeightedMineralDrop(Item specimenItem, Item fragmentsItem, int weight) {
+            this.specimenItem = specimenItem;
+            this.fragmentsItem = fragmentsItem;
+            this.weight = weight;
         }
     }
 
