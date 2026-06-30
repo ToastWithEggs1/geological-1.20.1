@@ -22,6 +22,14 @@
   "item.geological.scheelite_fragments": "Scheelite Fragments",
   "item.geological.magnetite": "Magnetite",
   "item.geological.magnetite_fragments": "Magnetite Fragments",
+  "item.geological.calcite": "Calcite",
+  "item.geological.calcite_fragments": "Calcite Fragments",
+  "item.geological.azurite": "Azurite",
+  "item.geological.azurite_fragments": "Azurite Fragments",
+  "item.geological.tigers_eye": "Tiger's Eye",
+  "item.geological.tigers_eye_fragments": "Tiger's Eye Fragments",
+  "item.geological.labradorite": "Labradorite",
+  "item.geological.labradorite_fragments": "Labradorite Fragments",
 
   "itemGroup.geological.blocks": "Geological : Blocks",
   "itemGroup.geological.items": "Geological : Items"

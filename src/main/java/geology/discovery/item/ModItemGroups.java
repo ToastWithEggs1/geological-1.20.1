@@ -39,18 +39,30 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.GEOLOGICAL_HAMMER))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.GEOLOGICAL_HAMMER);
-                        entries.add(ModItems.PYRITE);
-                        entries.add(ModItems.PYRITE_FRAGMENTS);
-                        entries.add(ModItems.MALACHITE);
-                        entries.add(ModItems.MALACHITE_FRAGMENTS);
-                        entries.add(ModItems.HEMATITE);
-                        entries.add(ModItems.HEMATITE_FRAGMENTS);
+
+                        // Minerals
+                        entries.add(ModItems.AZURITE);
+                        entries.add(ModItems.CALCITE);
                         entries.add(ModItems.GARNET);
-                        entries.add(ModItems.GARNET_FRAGMENTS);
-                        entries.add(ModItems.SCHEELITE);
-                        entries.add(ModItems.SCHEELITE_FRAGMENTS);
+                        entries.add(ModItems.HEMATITE);
+                        entries.add(ModItems.LABRADORITE);
                         entries.add(ModItems.MAGNETITE);
+                        entries.add(ModItems.MALACHITE);
+                        entries.add(ModItems.PYRITE);
+                        entries.add(ModItems.SCHEELITE);
+                        entries.add(ModItems.TIGERS_EYE);
+
+                        // Fragments
+                        entries.add(ModItems.AZURITE_FRAGMENTS);
+                        entries.add(ModItems.CALCITE_FRAGMENTS);
+                        entries.add(ModItems.GARNET_FRAGMENTS);
+                        entries.add(ModItems.HEMATITE_FRAGMENTS);
+                        entries.add(ModItems.LABRADORITE_FRAGMENTS);
                         entries.add(ModItems.MAGNETITE_FRAGMENTS);
+                        entries.add(ModItems.MALACHITE_FRAGMENTS);
+                        entries.add(ModItems.PYRITE_FRAGMENTS);
+                        entries.add(ModItems.SCHEELITE_FRAGMENTS);
+                        entries.add(ModItems.TIGERS_EYE_FRAGMENTS);
                     })
                     .build()
     );
