@@ -10,6 +10,18 @@
   "block.geological.strange_red_sandstone": "Strange Red Sandstone",
   "block.geological.strange_gravel": "Strange Gravel",
   "item.geological.geological_hammer": "Geological Hammer",
+  "item.geological.pyrite": "Pyrite",
+  "item.geological.pyrite_fragments": "Pyrite Fragments",
+  "item.geological.malachite": "Malachite",
+  "item.geological.malachite_fragments": "Malachite Fragments",
+  "item.geological.hematite": "Hematite",
+  "item.geological.hematite_fragments": "Hematite Fragments",
+  "item.geological.garnet": "Garnet",
+  "item.geological.garnet_fragments": "Garnet Fragments",
+  "item.geological.scheelite": "Scheelite",
+  "item.geological.scheelite_fragments": "Scheelite Fragments",
+  "item.geological.magnetite": "Magnetite",
+  "item.geological.magnetite_fragments": "Magnetite Fragments",
 
   "itemGroup.geological.blocks": "Geological : Blocks",
   "itemGroup.geological.items": "Geological : Items"

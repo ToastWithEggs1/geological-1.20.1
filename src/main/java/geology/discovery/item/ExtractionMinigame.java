@@ -258,4 +258,4 @@ public class ExtractionMinigame {
             this.successEnd = successStart + successWidth - 1;
         }
     }
-}
+};
