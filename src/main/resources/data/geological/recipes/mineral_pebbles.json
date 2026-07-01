@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "tag": "geological:mineral_fragments"
+    }
+  },
+  "result": {
+    "item": "geological:mineral_pebbles",
+    "count": 1
+  }
+}

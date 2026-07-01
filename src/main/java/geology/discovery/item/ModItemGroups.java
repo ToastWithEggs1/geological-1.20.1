@@ -28,6 +28,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRANGE_RED_SANDSTONE);
                         entries.add(ModBlocks.STRANGE_GRAVEL);
                         entries.add(ModBlocks.MINERAL_PEBBLES);
+                        entries.add(ModBlocks.WHITE_MINERAL_LAMP);
                     })
                     .build()
     );
@@ -39,8 +40,9 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemGroup.geological.items"))
                     .icon(() -> new ItemStack(ModItems.GEOLOGICAL_HAMMER))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.GEOLOGICAL_HAMMER);
 
+                        entries.add(ModItems.GEOLOGICAL_HAMMER);
+                        entries.add(ModItems.SIEVE);
                         // Minerals
                         entries.add(ModItems.AZURITE);
                         entries.add(ModItems.CALCITE);

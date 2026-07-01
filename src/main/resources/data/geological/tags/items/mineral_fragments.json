@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "geological:azurite_fragments",
+    "geological:calcite_fragments",
+    "geological:garnet_fragments",
+    "geological:hematite_fragments",
+    "geological:labradorite_fragments",
+    "geological:magnetite_fragments",
+    "geological:malachite_fragments",
+    "geological:pyrite_fragments",
+    "geological:scheelite_fragments",
+    "geological:tigers_eye_fragments"
+  ]
+}

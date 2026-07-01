@@ -9,5 +9,6 @@ public class GeologicalClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MINERAL_PEBBLES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_MINERAL_LAMP, RenderLayer.getCutout());
     }
 }

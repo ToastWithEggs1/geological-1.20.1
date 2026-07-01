@@ -71,6 +71,14 @@ public class ModBlocks {
                     .nonOpaque())
     );
 
+    public static final Block WHITE_MINERAL_LAMP = registerBlock(
+            "white_mineral_lamp",
+            new MineralLampBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
+                    .luminance(state -> 13)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque())
+    );
+
     private static Block registerBlock(String name, Block block) {
         Registry.register(
                 Registries.ITEM,

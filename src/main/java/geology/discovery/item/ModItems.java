@@ -12,6 +12,13 @@ public class ModItems {
             new GeologicalHammerItem(new FabricItemSettings())
     );
 
+    public static final Item SIEVE = registerItem(
+            "sieve",
+            new SieveItem(new FabricItemSettings().maxDamage(64))
+    );
+
+
+
     public static final Item PYRITE = registerItem(
             "pyrite",
             new MineralItem("Sulfide", "FeS₂")

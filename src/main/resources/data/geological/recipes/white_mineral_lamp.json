@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FDF",
+    "FTF",
+    "III"
+  ],
+  "key": {
+    "F": {
+      "tag": "geological:mineral_fragments"
+    },
+    "D": {
+      "item": "minecraft:white_dye"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "geological:white_mineral_lamp",
+    "count": 1
+  }
+}

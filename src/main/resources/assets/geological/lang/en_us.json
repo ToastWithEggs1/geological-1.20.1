@@ -9,9 +9,13 @@
   "block.geological.strange_sandstone": "Strange Sandstone",
   "block.geological.strange_red_sandstone": "Strange Red Sandstone",
   "block.geological.strange_gravel": "Strange Gravel",
+
   "block.geological.mineral_pebbles": "Mineral Pebbles",
+  "block.geological.white_mineral_lamp": "White Mineral Lamp",
 
   "item.geological.geological_hammer": "Geological Hammer",
+  "item.geological.sieve": "Sieve",
+
   "item.geological.pyrite": "Pyrite",
   "item.geological.pyrite_fragments": "Pyrite Fragments",
   "item.geological.malachite": "Malachite",
